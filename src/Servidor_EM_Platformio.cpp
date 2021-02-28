@@ -32,7 +32,7 @@
 #include <ArduinoOTA.h>       //Librería necesaria para el uso de OTA
 #include "ESP8266_Utils_OTA.hpp"  //Configuración para uso de OTA
 #include <BH1750.h>           //Librería para el sensor BH1750.
-#include <CREDENTIALS.H>  //Credenciales WiFi y Thinger.io
+#include <config.h>  //Credenciales WiFi y Thinger.io
 
 /*/////////////////////////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 ////////////////////////////////////////////////////////////////////////===== Fin librerías =====\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -216,7 +216,8 @@ ICACHE_RAM_ATTR void countup()
   attachInterrupt(digitalPinToInterrupt(Anemometro), countup, RISING);
   delay(1000 * RecordTime);
   detachInterrupt(digitalPinToInterrupt(Anemometro));
-  Velocidad_Viento = (float)InterruptCounter / (float)RecordTime * 2.4; //Pasamos a km/h. Cada vuelta del anemómetro equivale a 1,492 mph.
+  Velocidad_Viento = (float)InterruptCounter / (float)RecordTime * 1.2; //Pasamos a km/h. Cada vuelta del anemómetro equivale a 1,492 mph = 2.4 
+                                                                        //Tiene dos contactos divido entre 2.
 }
 /*----------------------------------FIN FUNCIÓN----------------------------------*/
 
@@ -257,10 +258,10 @@ ICACHE_RAM_ATTR void isr_rg() {
     Contador1h++;
     Contador24h++;
     contactTime = millis(); 
-    Serial.print ("El valor dentro del isr de Contador1h es: ");  //Comentar una vez funcione
+    /*Serial.print ("El valor dentro del isr de Contador1h es: ");  //Comentar una vez funcione
     Serial.println (Contador1h);                                  //Comentar una vez funcione
     Serial.print ("El valor dentro del isr de Contador24h es: "); //Comentar una vez funcione
-    Serial.println (Contador24h);                                 //Comentar una vez funcione
+    Serial.println (Contador24h);    */                             //Comentar una vez funcione
   } 
 } 
 
@@ -320,8 +321,8 @@ void grados_viento (int valor_Grados_Pin_Veleta)
  //int sensorMin[] = {73, 90, 100, 132, 197, 258, 303, 424, 480, 618, 649, 723, 804, 845, 903, 960};
 //int sensorMax[] = {77, 95, 105, 137, 201, 262, 307, 430, 485, 624, 655, 728, 812, 852, 910, 966}; 
 
-int sensorMin[] = {70, 85, 98, 120, 185, 240, 280, 400, 470, 600, 645, 700, 780, 840, 890, 945};
-int sensorMax[] = {80, 95, 115, 140, 220, 262, 320, 460, 500, 640, 680, 750, 835, 880, 940, 980}; 
+int sensorMin[] = {70, 85, 98, 120, 185, 240, 280, 400, 470, 600, 645, 700, 780, 840, 890, 945};  //Le doy más margen en cada lectura
+int sensorMax[] = {80, 95, 115, 140, 220, 262, 320, 460, 500, 640, 680, 750, 835, 880, 940, 980};  //Le doy más margen en cada lectura
 
   valor_Grados_Pin_Veleta = analogRead(direccion_Viento);
     for(int i=0; i<=15; i++) {
@@ -532,7 +533,7 @@ void loop()
     indiceUV = mapfloat (voltajeSalida, 0.99, 2.8, 0.0, 15.0);  //Mapeamos para hallar el índice UV
        
     //============================== Mostramos el valor de los sensores por el monitor serie. Se puede comentar una vez funcione.
-    leer_Sensores ();
+    //leer_Sensores (); //Comentar una vez funcione
 
     //============================== Envía los datos a Thinger.io
     thing.stream (thing["sensores"]);
