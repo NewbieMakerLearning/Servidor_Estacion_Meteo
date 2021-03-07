@@ -9,4 +9,8 @@
 #define WiFi_ssid "RedWifiPRO"  //Nombre de red
 #define WiFi_password "KirguisT@N2035"  //Clave de red
 
+IPAddress ip(192, 168, 1, 77);
+IPAddress gateway(192, 168, 1, 1);
+IPAddress subnet(255, 255, 255, 0);
+
 #endif

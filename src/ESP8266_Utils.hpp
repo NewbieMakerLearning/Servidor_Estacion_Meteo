@@ -1,3 +1,7 @@
+#include <config.h>
+#include <Arduino.h>
+#include <ESP8266WiFi.h>       //Librería de conexión WiFi del módulo ESP8266
+
 void ConnectWiFi_STA(bool useStaticIP = false)
 {
 	Serial.println("");
