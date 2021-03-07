@@ -119,6 +119,8 @@ Necestaremos 1 sensor.
   
 Con los sensores anteriores ya tenía una estación más o menos adecuada, pero me faltaba dos mediciones muy importantes, la lluvia y el viento. Con el combo de Argent Data Systems podía medir la precipitación gracias al pluviómetro y mediante programación la lluvia acumulada en 1h y en 24h. Una veleta, para saber la dirección del viento, mediante código desde que punto cardinal y desde que grado, y un anemómetro, para saber la velocidad del mismo. 
 
+Con la veleta me ayudó mucho el código de [Modest Maker](https://www.youtube.com/channel/UCOQPCnJA159S1ujoHroT85Q)
+
 Ya tenía el hardware, ¿y ahora qué?
 
 Con todos estos datos pensé en hacer una web para poder mostrarlos. Estaba aprendiendo a programar con Arduino, a desembolverme con la electrónica, a entender mínimamente la meteorología y sobre todo, recorrer lo que llamamos el camino de la vida con lo que ello conlleva, así que añadir HTML, CSS y yo que se más, me iba a llevar mucho tiempo si quería dar el 100% de mi capacidad. Pensé que seguramente habría algo ya realizado por alquien y podría adaptarlo a mis necesidades. Por supuesto si que lo hay.
@@ -133,7 +135,7 @@ Elegí la plataforma de Thinger.io porque me pareció visualmente atractiva.
 Este es mi panel de pruebas, como podéis ver se puede añadir alguna imagen a los paneles, poner un mapa y por supuesto, gráficas.
 
 <p align="center">
-    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger2.JPG" width="550" title="what's up">
+    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger2.JPG" width="650" title="what's up">
     </p>
     <br>
 
@@ -144,4 +146,4 @@ Y un detalle que me gustó fue el de poner una cuenta con retroceso para saber c
     </p>
     <br>
 
-
+Con el codigo de la librería de Thinger.io me ayudó bastante la web de [ESPloradores](https://www.esploradores.com/)
