@@ -20,7 +20,7 @@ Fui descubriendo una gran variedad de sensores que servirían para tener una inf
   </p>
 <br>
 
-Poco que añadir a esta placa. [iNFO PLACA](http://nodemcu.com/index_en.html). Basada en el ESP8266.
+Poco que añadir a esta placa. [info de la placa](http://nodemcu.com/index_en.html). Basada en el ESP8266.
 
 Tiene un puerto micro USB
 
@@ -41,7 +41,7 @@ La v3 que yo tengo, solo se puede usar a 9600 bps. Al establecer conexión media
   </p>
 <br>
 
-Necesataremos 2 placas, una la llamo servidor y la otra la llamo cliente.
+Necesiataremos 2 placas, una la llamo servidor y la otra cliente.
 
 Ahora los sensores. Os detallo los que actualmente están operativos.
 
@@ -67,6 +67,49 @@ Ahora los sensores. Os detallo los que actualmente están operativos.
 Necestaremos 2 sensores.
 
   ### **ML8511**
+
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ML8511.jpg" width="550" title="hover text">
+  </p>
+<br>
+• Longitud de onda: 280-390nm
+
+• Current consumption 300 μA standby current 0.1 μA
+
+El sensor UV ML8511 necesita dos pines analógicos y el NodeMCU dispone de 1, necesitamos un multiplexor/desmultiplexor, como el ADS1115.
+
+<p align="center">
+    <img src= "https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ADS1115_ADC_pines.png"> width="550" title="hover text">
+    </p>
+    <br>
+Según el ejemplo de Sparkfun, las conversiones analógicas a digitales dependen completamente del voltaje. Si alimentamos el sensor mediante la placa y esta a través de un USB, el voltaje puede variar de 5,25V a 4,75V. Por eso utilizaremos los 3,3V del NodeMCU. El pin marcado con 3,3V del sensor irá conectado a 3,3V y al pin A1 del ADS1115. El pin Out irá al pin analógico A0 del ADS1115. El EN ira a 3,3V también. Si eres como yo, con una imagen lo entenderás mejor.
+
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ADS1115_ADC.png" width="550" title="hover text">
+  </p>
+<br>
+
   ### **BH1750**
+
+  Las características del sensor BH1750 son las siguientes:
+
+Interfaz I2C con dos posibles direcciones. 0x5C y 0x23 (por defecto).
+Representación del espectro apróximadamente a la del ojo humano.
+Alta resolución, (1 - 65535 lx)
+Baja dependencia al tipo de luz. (Incandescente, fluorescente, halógena, LED, sol)
+Resutado de medición ajustable teniendo en cuenta el "cascarón" que cubre el sensor. (Es posible detectar un mínimo de 0,11 lx, un máximo de 100000 lx utilizando esta función.)
+Baja influencia de luz infrarroja.
+Especificaciones:
+
+- Voltaje
+*mín 2,4V
+*max 3,6V
+*Resolución 4lux, 1lux, 0,5lux. Usando la resolución de 1lux permite distinguir iluminaciones por debajo de los 10lux (luz crepúscular) Para 1 lux y 4 lux se usan los 16bits de datos, llegando a los 65535 lux (día soleado sin luz directa) En el modo 0,5 lux usa 15 bits y puede representar un valor máximo de 32767 lux (exterior sin luz directa) Fuente
+- Consumo
+*mín 0,01 μA
+*max 190 μA
+
+Necestaremos 1 sensor.
+
   ### **ARGENT DATA SYSTEMS**
   
