@@ -52,12 +52,19 @@ Ahora los sensores. Os detallo los que actualmente están operativos.
   </p>
 <br>
 - Temperatura (rango de -40 a + 85 °C, precisión ±1 °C y resolución 0,01 °C)
+
 - Humedad (a 100%, con una precisión de ±3% Pa y una resolución de 0.008%)
+
 - Presión (300-1100 hPa, precisión de ±1 Pa, y resolución de 0,18 Pa)
+
 - Current consumption -1.8 μA a 1Hz - Humedad y temperatura
+
     - 2.8 μA a 1Hz - Presión y temperatura
+
     - 3.6 μA a 1Hz - Humedad, presión y temperatura
+
     - 0.1 μA in sleep mode
+
     - V 3,3V
 
 Necestaremos 2 sensores.
@@ -79,6 +86,7 @@ El sensor UV ML8511 necesita dos pines analógicos y el NodeMCU dispone de 1, ne
     </p>
     <br>
 Según el ejemplo de Sparkfun, las conversiones analógicas a digitales dependen completamente del voltaje. Si alimentamos el sensor mediante la placa y esta a través de un USB, el voltaje puede variar de 5,25V a 4,75V. Por eso utilizaremos los 3,3V del NodeMCU. El pin marcado con 3,3V del sensor irá conectado a 3,3V y al pin A1 del ADS1115. El pin Out irá al pin analógico A0 del ADS1115. El EN ira a 3,3V también. Si eres como yo, con una imagen lo entenderás mejor.
+
 
 <p align="center">
   <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ADS1115_ADC.png" width="550" title="hover text">
@@ -110,3 +118,31 @@ Necestaremos 1 sensor.
 
   ### **ARGENT DATA SYSTEMS**
   
+Con los sensores anteriores ya tenía una estación más o menos adecuada, pero me faltaba dos mediciones muy importantes, la lluvia y el viento. Con el combo de Argent Data Systems podía medir la precipitación gracias al pluviómetro y mediante programación la lluvia acumulada en 1h y en 24h. Una veleta, para saber la dirección del viento, mediante código desde que punto cardinal y desde que grado, y un anemómetro, para saber la velocidad del mismo. 
+
+Ya tenía el hardware, ¿y ahora qué?
+
+Con todos estos datos pensé en hacer una web para poder mostrarlos. Estaba aprendiendo a programar con Arduino, a desembolverme con la electrónica, a entender mínimamente la meteorología y sobre todo, recorrer lo que llamamos el camino de la vida con lo que ello conlleva, así que añadir HTML, CSS y yo que se más, me iba a llevar mucho tiempo si quería dar el 100% de mi capacidad. Pensé que seguramente habría algo ya realizado por alquien y podría adaptarlo a mis necesidades. Por supuesto si que lo hay.
+
+Elegí la plataforma de Thinger.io porque me pareció visualmente atractiva.
+
+<p align="center">
+    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger1.JPG" width="650" title="hola amigo">
+    </p>
+    <br>
+
+Este es mi panel de pruebas, como podéis ver se puede añadir alguna imagen a los paneles, poner un mapa y por supuesto, gráficas.
+
+<p aligh= "center">
+    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger2.JPG" width="550" title="what's up">
+    </p>
+    <br>
+
+Y un detalle que me gustó fue el de poner una cuenta con retroceso para saber cuando se va a actualizar el panel.
+
+<p aligh="center">
+    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger3.JPG" width="550" title="hola">
+    </p>
+    <br>
+
+
