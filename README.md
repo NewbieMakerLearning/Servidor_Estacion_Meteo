@@ -16,7 +16,7 @@ Fui descubriendo una gran variedad de sensores que servirían para tener una inf
   ### **NodeMCU**
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/NodeMCUv3.jpg" width="450" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/NodeMCUv3.jpg" width="550" title="hover text">
   </p>
 <br>
 
@@ -36,12 +36,35 @@ Se alimenta a 3,3V.
 
 La v3 que yo tengo, solo se puede usar a 9600 bps. Al establecer conexión mediante el puerto serie, Serial.begin (9600);
 
-Necesataremos 2 placas.
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/NodeMCU-pines.png" width="550" title="hover text">
+  </p>
+<br>
 
-Os detallo los que actualmente están operativos.
+Necesataremos 2 placas, una la llamo servidor y la otra la llamo cliente.
+
+Ahora los sensores. Os detallo los que actualmente están operativos.
 
   ### **BME280**
 
+<p align="center">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/BMP280.jpg" width="550" title="hover text">
+  </p>
+<br>
+• Temperatura (rango de -40 a + 85 °C, precisión ±1 °C y resolución 0,01 °C)
+
+• Humedad (a 100%, con una precisión de ±3% Pa y una resolución de 0.008%)
+
+• Presión (300-1100 hPa, precisión de ±1 Pa, y resolución de 0,18 Pa)
+
+• Current consumption -1.8 μA a 1Hz - Humedad y temperatura
+
+    2.8 μA a 1Hz - Presión y temperatura
+    3.6 μA a 1Hz - Humedad, presión y temperatura
+    0.1 μA in sleep mode
+    V 3,3V
+
+Necestaremos 2 sensores.
 
   ### **ML8511**
   ### **BH1750**
