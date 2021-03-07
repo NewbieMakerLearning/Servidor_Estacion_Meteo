@@ -102,12 +102,12 @@ Baja influencia de luz infrarroja.
 Especificaciones:
 
 - Voltaje
-*mín 2,4V
-*max 3,6V
-*Resolución 4lux, 1lux, 0,5lux. Usando la resolución de 1lux permite distinguir iluminaciones por debajo de los 10lux (luz crepúscular) Para 1 lux y 4 lux se usan los 16bits de datos, llegando a los 65535 lux (día soleado sin luz directa) En el modo 0,5 lux usa 15 bits y puede representar un valor máximo de 32767 lux (exterior sin luz directa) Fuente
+* mín 2,4V
+* max 3,6V
+* Resolución 4lux, 1lux, 0,5lux. Usando la resolución de 1lux permite distinguir iluminaciones por debajo de los 10lux (luz crepúscular) Para 1 lux y 4 lux se usan los 16bits de datos, llegando a los 65535 lux (día soleado sin luz directa) En el modo 0,5 lux usa 15 bits y puede representar un valor máximo de 32767 lux (exterior sin luz directa) Fuente
 - Consumo
-*mín 0,01 μA
-*max 190 μA
+* mín 0,01 μA
+* max 190 μA
 
 Necestaremos 1 sensor.
 
