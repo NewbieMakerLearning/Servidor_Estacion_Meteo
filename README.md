@@ -86,8 +86,7 @@ El sensor UV ML8511 necesita dos pines analógicos y el NodeMCU dispone de 1, ne
     </p>
     <br>
 Según el ejemplo de Sparkfun, las conversiones analógicas a digitales dependen completamente del voltaje. Si alimentamos el sensor mediante la placa y esta a través de un USB, el voltaje puede variar de 5,25V a 4,75V. Por eso utilizaremos los 3,3V del NodeMCU. El pin marcado con 3,3V del sensor irá conectado a 3,3V y al pin A1 del ADS1115. El pin Out irá al pin analógico A0 del ADS1115. El EN ira a 3,3V también. Si eres como yo, con una imagen lo entenderás mejor.
-
-
+<br>
 <p align="center">
   <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ADS1115_ADC.png" width="550" title="hover text">
   </p>
@@ -141,7 +140,7 @@ Este es mi panel de pruebas, como podéis ver se puede añadir alguna imagen a l
 Y un detalle que me gustó fue el de poner una cuenta con retroceso para saber cuando se va a actualizar el panel.
 
 <p aligh="center">
-    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger3.JPG" width="550" title="hola">
+    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger3.JPG" width="450" title="hola">
     </p>
     <br>
 
