@@ -8,6 +8,5 @@
 
 #define WiFi_ssid "RedWifiPRO"  //Nombre de red
 #define WiFi_password "KirguisT@N2035"  //Clave de red
-const char* hostname = "Servidor1";  //Para uso en actualización vía TA
 
 #endif
