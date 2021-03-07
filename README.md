@@ -132,14 +132,14 @@ Elegí la plataforma de Thinger.io porque me pareció visualmente atractiva.
 
 Este es mi panel de pruebas, como podéis ver se puede añadir alguna imagen a los paneles, poner un mapa y por supuesto, gráficas.
 
-<p aligh= "center">
+<p align="center">
     <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger2.JPG" width="550" title="what's up">
     </p>
     <br>
 
 Y un detalle que me gustó fue el de poner una cuenta con retroceso para saber cuando se va a actualizar el panel.
 
-<p aligh="center">
+<p align="center">
     <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Dashboard_Thinger3.JPG" width="450" title="hola">
     </p>
     <br>
