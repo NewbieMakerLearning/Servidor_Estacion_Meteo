@@ -11,7 +11,7 @@ Por muchos ejemplos que veía y ponía en práctica, no conseguía conectar a mi
     </p>
     <br>
 
-No se como pensé en que tal vez el maravillo firewall estaría bloqueando la conexión, y así era.
+No se como, pensé en que tal vez el maravillo firewall estaría bloqueando la conexión, y así era.
 
 Uso NOD32 y para solucionar este problema hice lo siguiente.
 
