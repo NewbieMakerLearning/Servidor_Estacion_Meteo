@@ -19,7 +19,7 @@ Para usar la conexión OTA, necesitamos instalar [Python](https://www.python.org
 Solo hay que tener una cosa en cuenta al instalarlo en windows. En la primera pantalla que nos sale debemos marcar **_Add Python to Path_**
 
 <p align="center">
-    <img src="ttps://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Python.JPG" width="550" title="hola amigo">
+    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Python.JPG" width="550" title="hola amigo">
     </p>
     <br>
 h
