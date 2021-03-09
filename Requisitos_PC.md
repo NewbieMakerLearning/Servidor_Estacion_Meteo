@@ -22,4 +22,3 @@ Solo hay que tener una cosa en cuenta al instalarlo en windows. En la primera pa
     <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/Python.JPG" width="550" title="hola amigo">
     </p>
     <br>
-h
