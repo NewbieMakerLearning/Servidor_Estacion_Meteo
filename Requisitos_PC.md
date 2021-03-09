@@ -12,3 +12,9 @@ Probablemente algunos dardarán unas horas pero en mi caso, al no tener ni idea 
 
 Lo necesitarás para conectar el NodeMCU al pc. [http://www.wch.cn/downloads/file/5.html](http://www.wch.cn/downloads/file/5.html)]
 
+* Python
+
+Para usar la conexión OTA, necesitamos instalar [Python](https://www.python.org/downloads/).
+
+Solo hay que tener una cosa en cuenta al instalarlo en windows. En la primera pantalla que nos sale debemos marcar **_Add python.exe to Path_**
+
