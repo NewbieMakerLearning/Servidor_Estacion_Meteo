@@ -29,10 +29,26 @@ Fui hasta _Configuración/protección de la red_, le di al engranaje de la derec
 
 En la parte _Básico/modo de filtrado_ le di a _modo interactivo_ y tras aceptar volví al IDE y probé la conexción. Inmediatamente me salto un aviso del firewall avisándome de la conexión. Aceptar y poner otra vez en modo automático porque si no hacemos esto, a cada rato tendremos avisos de estos que al final a mi me molestan.
 
-### El IDE no encuentra mi placa
+### El IDE de Arduino no encuentra mi placa
 
 Has de decirle a cualquier IDE que placa vas a usar. En el IDE de Arduino has de ir a **_Archivo/Preferencias** En **_Gestor de URLs..._** ponemos la siguiente dirección:
 
 ```
 http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://dl.espressif.com/dl/package_esp32_index.json
 ```
+
+<p align="center">
+    <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/arduino_IDE.JPG" width="550" title="hola amigo">
+    </p>
+    <br>
+
+En **_Herramientas/Placa/Gestor de tarjetas_** y buscamos el paquete del ESP8266, instalar y listo, ya podemos usar el ESP8266 con el IDE de Arduino.
+
+### No se instalar Platformio
+
+No te diré como hacerlo pero si donde encontrar la información para hacerlo.
+
+[Aquí](https://docs.platformio.org/en/latest/integration/ide/vscode.html#ide-vscode)
+
+En la misma página de Platformio en el apartado de _Docs_, en _PlatformIO IDE_ tienes un enlace a VSCode.
+
