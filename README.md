@@ -8,15 +8,16 @@ He intentado poner enlaces y agradecer a todas esas personas que me ayudaron des
 Después de esta breve explicación, continuemos.
 
 Al principio iba a poner un solo sensor, el BME280 que mide temperatura, humedad y presión. Como era y soy bastante novato fui viendo posibilidades, al igual que con la parte
-del [cliente](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo). Informándome sobre meteorología vi que es un tema en el que se puede profundizar bastante. Aprendí que con unas ["simples fórmulas"](https://es.wikipedia.org/wiki/Punto_de_roc%C3%ADo), que la comunidad Arduino [compartió](https://forum.arduino.cc/index.php?topic=552050.0), podía añadir una medida más y hayar el punto de rocío y la sensación térmica. Este último valor no está puesto porque leí que no es muy fiable en el ámbito de
-la meteorología.
+del [cliente](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo). 
 
-Fui descubriendo una gran variedad de sensores que servirían para tener una información más amplia así que los añadí. Antes de pasar a los sensores, breve introducción a la placa usada.
+Informándome sobre meteorología vi que es un tema en el que se puede profundizar bastante. Aprendí que con unas ["simples fórmulas"](https://es.wikipedia.org/wiki/Punto_de_roc%C3%ADo), que la comunidad Arduino [compartió](https://forum.arduino.cc/index.php?topic=552050.0), podía añadir una medida más y hayar el punto de rocío además de la sensación térmica. Este último valor no se ha tenido en cuenta porque leí que no es muy fiable en el ámbito de la meteorología.
+
+Fui descubriendo una gran variedad de sensores que servirían para tener una información más amplia así que los añadí, como fue el sensor de radiación UV o el de luminosidad. Antes de pasar a los sensores, breve introducción a la placa usada.
 
   ### **NodeMCU**
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/NodeMCUv3.jpg" width="550" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/NodeMCUv3.jpg"width="550" title="hover text">
   </p>
 <br>
 
@@ -26,7 +27,7 @@ Tiene un puerto micro USB
 
 Conversor Serie-USB, el CH340G
 
-un LED conectado al pin 2 o D4 y dos botones, uno para reinicio y otro para flasheo.
+Un LED conectado al pin 2 o D4 y dos botones, uno para reinicio y otro para flasheo.
 
 Se alimenta a 3,3V.
 
@@ -37,18 +38,18 @@ Se alimenta a 3,3V.
 La v3 que yo tengo, solo se puede usar a 9600 bps. Al establecer conexión mediante el puerto serie, Serial.begin (9600);
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/NodeMCU-pines.png" width="550" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/NodeMCU-pines.png"width="550" title="hover text">
   </p>
 <br>
 
-Necesiataremos 2 placas, una la llamo servidor y la otra cliente.
+Necesiataremos 2 placas, una la llamo servidor y la otra [cliente](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo).
 
-Ahora los sensores. Os detallo los que actualmente están operativos.
+Ahora los sensores. Te detallo los que actualmente están operativos.
 
   ### **BME280**
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/BMP280.jpg" width="550" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/BMP280.jpg"width="550" title="hover text">
   </p>
 <br>
 - Temperatura (rango de -40 a + 85 °C, precisión ±1 °C y resolución 0,01 °C)
@@ -67,12 +68,12 @@ Ahora los sensores. Os detallo los que actualmente están operativos.
 
     - V 3,3V
 
-Necestaremos 2 sensores.
+Necestaremos 2 sensores. Uno para el [cliente](https://github.com/NewbieMakerLearning/Cliente_Estacion_Meteo)
 
   ### **ML8511**
 
 <p align="center">
-  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ML8511.jpg" width="550" title="hover text">
+  <img src="https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ML8511.jpg"width="550" title="hover text">
   </p>
 <br>
 - Longitud de onda: 280-390nm
@@ -82,7 +83,7 @@ Necestaremos 2 sensores.
 El sensor UV ML8511 necesita dos pines analógicos y el NodeMCU dispone de 1, necesitamos un multiplexor/desmultiplexor, como el ADS1115.
 
 <p align="center">
-    <img src= "https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ADS1115_ADC_pines.png"> width="550" title="hover text">
+    <img src= "https://github.com/NewbieMakerLearning/Servidor_Estacion_Meteo/blob/master/pictures/ADS1115_ADC_pines.png"width="550" title="hover text">
     </p>
     <br>
 Según el ejemplo de Sparkfun, las conversiones analógicas a digitales dependen completamente del voltaje. Si alimentamos el sensor mediante la placa y esta a través de un USB, el voltaje puede variar de 5,25V a 4,75V. Por eso utilizaremos los 3,3V del NodeMCU. El pin marcado con 3,3V del sensor irá conectado a 3,3V y al pin A1 del ADS1115. El pin Out irá al pin analógico A0 del ADS1115. El EN ira a 3,3V también. Si eres como yo, con una imagen lo entenderás mejor.
