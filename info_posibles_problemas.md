@@ -29,3 +29,10 @@ Fui hasta _Configuración/protección de la red_, le di al engranaje de la derec
 
 En la parte _Básico/modo de filtrado_ le di a _modo interactivo_ y tras aceptar volví al IDE y probé la conexción. Inmediatamente me salto un aviso del firewall avisándome de la conexión. Aceptar y poner otra vez en modo automático porque si no hacemos esto, a cada rato tendremos avisos de estos que al final a mi me molestan.
 
+### El IDE no encuentra mi placa
+
+Has de decirle a cualquier IDE que placa vas a usar. En el IDE de Arduino has de ir a **_Archivo/Preferencias** En **_Gestor de URLs..._** ponemos la siguiente dirección:
+
+```
+http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://dl.espressif.com/dl/package_esp32_index.json
+```
