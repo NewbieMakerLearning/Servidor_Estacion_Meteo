@@ -121,6 +121,7 @@ Con los sensores anteriores ya tenía una estación más o menos adecuada, pero 
 
 Con la veleta me ayudó mucho el código de [Modest Maker](https://www.youtube.com/channel/UCOQPCnJA159S1ujoHroT85Q)
 
+Con el anemómetro me resutó de ayuda el código de [www.aeq-web.com](https://www.aeq-web.com/)
 Ya tenía el hardware, ¿y ahora qué?
 
 Con todos estos datos pensé en hacer una web para poder mostrarlos. Estaba aprendiendo a programar con Arduino, a desembolverme con la electrónica, a entender mínimamente la meteorología y sobre todo, recorrer lo que llamamos el camino de la vida con lo que ello conlleva, así que añadir HTML, CSS y yo que se más, me iba a llevar mucho tiempo si quería dar el 100% de mi capacidad. Pensé que seguramente habría algo ya realizado por alquien y podría adaptarlo a mis necesidades. Por supuesto si que lo hay.
