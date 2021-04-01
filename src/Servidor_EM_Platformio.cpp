@@ -54,10 +54,6 @@ const byte RainSensorPin = D6;  //Pin Pluviómetro GPIO 12
 
 /*========================= Conexión con Thinger.io =========================*/
 
-//#define usuario "EstacionMeteo" //Nuestro usuario de Thinger.io
-//#define device_Id "Servidor_Meteo" //Poner el device_ID elegido en Thinger.io
-//#define device_credentials "A+aKTL!K2!Dv" //Poner nuestra device_credencials de Thinger.io
-
 ThingerESP8266 thing(usuario, device_Id, device_credentials);
 
 #define EMAIL_ENDPOINT "Prueba_IFTT"  //El endpoint se usa para integrar la plataforma thinger.io con servicios externos, en este caso, recibir notificación por email.
@@ -102,9 +98,6 @@ void avisos_Thinger ()
 /*/////////////////////////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 ////////////////////////////////////////////////////////////////===== Parámetros de conexión WiFi =====\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /////////////////////////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-
-//const char WiFi_ssid[] = "RedWifi";             //Nombre de red
-//const char WiFi_password[] = "KirguisT@N2035";  //Clave de red
 
 /*--------------FUNCIÓN PARA MOSTRAR POR EL MONITOR SERIE INFO WIFI--------------*/
 void mostrar_info_Red ()
