@@ -123,7 +123,7 @@ Con los sensores anteriores ya tenía una estación más o menos adecuada, pero 
 
 Con la veleta me ayudó mucho el código de [Modest Maker](https://www.youtube.com/channel/UCOQPCnJA159S1ujoHroT85Q)
 
-Con el anemómetro me resutó de ayuda el código de [www.aeq-web.com](https://www.aeq-web.com/)
+Con el anemómetro me resultó de ayuda el código de [www.aeq-web.com](https://www.aeq-web.com/)
 
 Ya tenía el hardware, ¿y ahora qué?
 
